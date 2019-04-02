@@ -17,19 +17,21 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp',(err,db) =>{
 //        console.log(result);
 //    })
 
-db.collection ('Todos').findOneAndUpdate({
-    name: 'ashok'
+db.collection ('Users').findOneAndUpdate({
+    _id: new ObjectID('5ca1d199ec28da29c800b2dc') 
 }, {
     $set: {
-        completed: true
+        name: 'ashok'
+    },
+    $inc: {
+        age:1
     }
+    
 }, {
-    returnOriginal: false 
-
+    returnOriginal: 'false'
 }).then((result) => {
-    console.log(result);
+console.log(result);
 });
 
- });
-
-  
+})
+//object relation management
