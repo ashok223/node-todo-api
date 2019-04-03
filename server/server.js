@@ -3,7 +3,7 @@ var bodyParser = require('body-parser');
 
 var{mongoose} = require('./db/mongoose');
 var {Todo} = require('./models/todo');
-var{newmodel} = require('./models/users')
+var{User} = require('./models/users')
 
 // var newmodel= new newModel ({
 //  email: 'ashok@gmail.com'
